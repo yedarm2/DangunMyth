@@ -7,7 +7,6 @@ class S2C5 extends Scene {
   OnEnter() {
     imageManager.LoadImage("background", "Images/S2/C5/background");
     imageManager.LoadImage("button", "Images/S2/C5/button");
-    soundManager.LoadSound("effect", "Sounds/S2/C5/effect/effect.wav");
     this.isEffectOut = false;
   }
 
@@ -36,7 +35,7 @@ class S2C5 extends Scene {
 
       if (mouseIsPressed) {
         if (!this.isEffectOut) {
-          soundManager.PlaySound("effect");
+          soundManager.PlaySound("S2/C5/effect");
           this.isEffectOut = !this.isEffectOut;
         }
         // Navigate to the mini-game scene

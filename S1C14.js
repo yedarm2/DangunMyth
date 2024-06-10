@@ -8,7 +8,6 @@ class S1C14 extends Scene {
   OnEnter() {
     imageManager.LoadImage("background", "Images/S1/C14/background");
     imageManager.LoadImage("button", "Images/S1/C14/button");
-    soundManager.LoadSound("effect", "Sounds/S1/C14/effect/effect.wav");
     this.enterTime = timeManager.time;
     this.isEffectOut = false;
   }
@@ -37,7 +36,7 @@ class S1C14 extends Scene {
 
       if (mouseIsPressed) {
         if (!this.isEffectOut) {
-          soundManager.PlaySound("effect");
+          soundManager.PlaySound("S1/C14/effect");
           this.isEffectOut = !this.isEffectOut;
         }
         // 미니 게임 씬 이동
