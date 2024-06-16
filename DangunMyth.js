@@ -95,6 +95,10 @@ function preload(){
   soundManager.LoadSound("Effects/Step_Rock_02", "Sounds/Effects/Step_Rock_02.mp3");
   soundManager.LoadSound("haha", "Sounds/S3/C3/V2/_2/_1/narr/haha.mp3");
   soundManager.LoadSound("S3/C3/V2/_2/_3/narr", "Sounds/S3/C3/V2/_2/_3/narr/narr.mp3");
+  soundManager.LoadSound(
+    "S3/C3/V2/_0/narr/woonggirl",
+    "Sounds/S3/C3/V2/_0/narr/woonggirl.mp3"
+  );
 }
 
 function setup() {
@@ -103,7 +107,7 @@ function setup() {
   noStroke();
 
   fontManager = new FontManager();
-  fontManager.LoadFont("font", "NanumGothic.ttf");
+  fontManager.LoadFont("font", "LeeSeoyun.otf");
 
   imageManager = new ImageManager();
   timeManager = new TimeManager();
@@ -204,5 +208,11 @@ function keyPressed() {
         sceneManager.ChangeSceneManually(sceneList[index - 1]);
       }
     }
+  }
+}
+
+function mousePressed() {
+  if (sceneManager.currentScene instanceof S2C6) {
+		sceneManager.currentScene.OnMousePressed();
   }
 }

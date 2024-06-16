@@ -14,7 +14,7 @@ class S3C3V1_4_2 extends Scene {
 
     this.alpha = 255;
     this.fadeoutTime = 4;
-    this.preparationTime = 3;
+    this.preparationTime = 1;
   }
 
   OnDraw() {
@@ -27,7 +27,7 @@ class S3C3V1_4_2 extends Scene {
       this.alpha
     );
 
-    if (timeManager.time - timeManager.enterTime >= 1) {
+    if (timeManager.time - this.enterTime >= 1) {
       this.alpha -= (255 / this.fadeoutTime) * timeManager.deltaTime;
     }
     if (this.alpha <= 0) {
